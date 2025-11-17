@@ -1,12 +1,10 @@
-version: "3.1"
-
 services:
   peppermint_postgres:
     container_name: peppermint_postgres
     image: postgres:latest
     restart: always
     volumes:
-      - pgdata_live:/var/lib/postgresql/data
+      - pgdata_live:/var/lib/postgresql # Updated for Postgres 18+
     environment:
       POSTGRES_USER: peppermint
       POSTGRES_PASSWORD: 12345
